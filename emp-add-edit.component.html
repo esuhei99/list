@@ -1,0 +1,48 @@
+<div class="padding">
+  <div mat-dialog-title>
+    <span>USER ADD</span>
+    </div>
+    <form [formGroup]="empForm" (ngSubmit)="onformSubmit()" >
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>First name</mat-label>
+                <input matInput type="text" placeholder="surname" formControlName="firstName">
+              </mat-form-field>
+              <mat-form-field appearance="outline">
+                <mat-label>Last name</mat-label>
+                <input matInput  placeholder="name"formControlName="Lastname">
+              </mat-form-field>
+              <div class="row">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput type="text" placeholder=" test@gmail.com" formControlName="Email">
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>phone</mat-label>
+                    <input matInput type="text" placeholder="99" formControlName="phone">
+                  </mat-form-field>
+                  <mat-form-field appearance="outline">
+                    <mat-label>reqister</mat-label>
+                    <input matInput type="text" placeholder=" ia" formControlName="reqister">
+                  </mat-form-field>
+    
+              </div>
+              <div class="">
+                <mat-radio-group aria-label="Select an option"formControlName="Gender">
+                    <mat-label><b>Gender</b></mat-label>
+                    <mat-radio-button value="male">male </mat-radio-button>
+                    <mat-radio-button value="felmale">felmale </mat-radio-button>
+                    <mat-radio-button value="outers">outers </mat-radio-button>
+                  </mat-radio-group>
+                  
+              </div>
+        </div>
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-button>Cancel</button>
+        <button mat-button type="submit">Save</button>
+    </div>
+    </form>
+</div>
+
